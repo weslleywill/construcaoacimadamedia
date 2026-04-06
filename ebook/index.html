@@ -349,12 +349,14 @@
       text-align: center;
     }
 
-    .author-section img {
-      width: 80px;
-      height: 80px;
+    .author-photo {
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       margin-bottom: 16px;
-      border: 2px solid #C0392B;
+      border: 3px solid #C0392B;
+      object-fit: cover;
+      object-position: center top;
     }
 
     .author-name {
@@ -580,6 +582,7 @@
   <section>
     <div class="container author-section">
       <div class="section-tag">Quem criou</div>
+      <img src="autor.jpg" alt="Weslley Will — Personal Trainer" class="author-photo">
       <h2>Weslley Will</h2>
       <p class="author-handle">@weslley.will</p>
       <p>Personal trainer em formação. Não sou guru. Não sou coach motivacional. Sou alguém que vive isso todo dia.</p>
