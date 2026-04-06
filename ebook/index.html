@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>O Treino Que Ninguém Vê — Ebook de Mentalidade no Treino | R$37</title>
   <meta name="description" content="Ebook O Treino Que Ninguém Vê: 7 dias de desafio mental pra quem treina mas não consegue manter consistência. Mentalidade acima da média. R$37,00 com garantia de 7 dias.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="canonical" href="https://construcaoacimadamedia.com.br/ebook/">
   <meta property="og:title" content="O Treino Que Ninguém Vê — Ebook de Mentalidade no Treino">
   <meta property="og:description" content="7 dias pra construir a mentalidade que separa quem desiste de quem chega lá. R$37,00.">
@@ -372,20 +373,42 @@
     /* FAQ */
     .faq-item {
       border-bottom: 1px solid #1A1A1A;
-      padding: 20px 0;
+      padding: 0;
     }
 
     .faq-q {
       font-size: 16px;
       font-weight: 600;
       color: #FFF;
-      margin-bottom: 8px;
+      padding: 20px 0;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-q::-webkit-details-marker { display: none; }
+
+    .faq-q::after {
+      content: '+';
+      font-size: 22px;
+      color: #C0392B;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-left: 16px;
+      transition: transform 0.2s;
+    }
+
+    details[open] .faq-q::after {
+      content: '−';
     }
 
     .faq-a {
       font-size: 14px;
       color: #888;
       line-height: 1.6;
+      padding-bottom: 20px;
     }
 
     /* FOOTER */
@@ -570,25 +593,25 @@
       <div class="section-tag">Dúvidas</div>
       <h2>Perguntas frequentes</h2>
 
-      <div class="faq-item">
-        <div class="faq-q">Isso é um plano de treino?</div>
+      <details class="faq-item">
+        <summary class="faq-q">Isso é um plano de treino?</summary>
         <div class="faq-a">Não. Não tem exercício, série ou dieta. É um guia de mentalidade. Se você quer planilha, não é isso. Se quer parar de sabotar o treino que já tem, aí sim.</div>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <div class="faq-q">Vou ter resultado físico em 7 dias?</div>
+      <details class="faq-item">
+        <summary class="faq-q">Vou ter resultado físico em 7 dias?</summary>
         <div class="faq-a">Não. Ninguém muda o corpo em 7 dias. Mas você pode mudar como pensa. E quando muda como pensa, para de desistir. E quando para de desistir, o resultado vem.</div>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <div class="faq-q">R$37,00 é caro pra um ebook?</div>
+      <details class="faq-item">
+        <summary class="faq-q">R$37,00 é caro pra um ebook?</summary>
         <div class="faq-a">Você já gastou quanto com whey que venceu no armário? Com matrícula que não usou? R$37,00 é menos que um pote de whey. A diferença é que o whey acaba em 30 dias e você continua desistindo.</div>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <div class="faq-q">E se eu não gostar?</div>
+      <details class="faq-item">
+        <summary class="faq-q">E se eu não gostar?</summary>
         <div class="faq-a">Pede reembolso em até 7 dias pela Hotmart. Sem perguntas. 100% do valor de volta.</div>
-      </div>
+      </details>
     </div>
   </section>
 
