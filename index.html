@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construção Acima da Média — Weslley Will</title>
+  <meta name="description" content="Personal em formação. Treino no feeling. Mentalidade acima da média. Conteúdo real sobre treino, consistência e o que ninguém fala.">
+  <meta property="og:title" content="Construção Acima da Média — Weslley Will">
+  <meta property="og:description" content="Personal em formação. Treino no feeling. O treino mais importante é o que ninguém vê.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #0D0D0D;
+      color: #E0E0E0;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(192, 57, 43, 0.15);
+      color: #C0392B;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span { color: #C0392B; }
+
+    .hero-sub {
+      font-size: 17px;
+      color: #888;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .hero-name {
+      font-size: 14px;
+      color: #C0392B;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    /* SOBRE */
+    .sobre {
+      padding: 48px 0;
+      border-top: 1px solid #1A1A1A;
+    }
+
+    .sobre-text {
+      font-size: 16px;
+      color: #CCC;
+      margin-bottom: 16px;
+    }
+
+    .sobre-text strong { color: #FFF; }
+
+    .quote-box {
+      background: #1A1A1A;
+      border-left: 3px solid #C0392B;
+      padding: 20px;
+      margin: 28px 0;
+      font-style: italic;
+      color: #CCC;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* VALORES */
+    .valores {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 28px 0;
+    }
+
+    .valor-card {
+      background: #141414;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .valor-card .emoji {
+      font-size: 28px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .valor-card .titulo {
+      font-size: 13px;
+      font-weight: 700;
+      color: #FFF;
+      margin-bottom: 4px;
+    }
+
+    .valor-card .desc {
+      font-size: 12px;
+      color: #888;
+    }
+
+    /* PRODUTO */
+    .produto {
+      padding: 48px 0;
+      border-top: 1px solid #1A1A1A;
+    }
+
+    .section-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: #C0392B;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #FFF;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .produto-card {
+      background: #141414;
+      border: 1px solid #1A1A1A;
+      border-radius: 12px;
+      padding: 32px 24px;
+      text-align: center;
+      margin: 24px 0;
+    }
+
+    .produto-card img {
+      width: 140px;
+      border-radius: 6px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+      margin-bottom: 20px;
+    }
+
+    .produto-card h3 {
+      font-size: 18px;
+      color: #FFF;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .produto-card .preco {
+      font-size: 28px;
+      font-weight: 800;
+      color: #C0392B;
+      margin: 12px 0;
+    }
+
+    .produto-card .preco small {
+      font-size: 14px;
+      color: #888;
+    }
+
+    .produto-card .desc {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .cta-btn {
+      display: block;
+      width: 100%;
+      padding: 16px 32px;
+      background: #C0392B;
+      color: #FFF;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .cta-btn:hover {
+      background: #E74C3C;
+      transform: translateY(-2px);
+    }
+
+    .cta-sub {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      margin-top: 8px;
+    }
+
+    /* SOCIAL */
+    .social {
+      padding: 48px 0;
+      border-top: 1px solid #1A1A1A;
+      text-align: center;
+    }
+
+    .social-link {
+      display: inline-block;
+      padding: 14px 32px;
+      border: 1px solid #C0392B;
+      color: #C0392B;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 10px;
+      margin: 8px;
+      transition: all 0.2s;
+    }
+
+    .social-link:hover {
+      background: #C0392B;
+      color: #FFF;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      border-top: 1px solid #1A1A1A;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: #555;
+    }
+
+    .brand-tag {
+      font-size: 10px;
+      color: #444;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 { font-size: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="hero">
+      <div class="hero-badge">Personal em Formacao</div>
+      <h1>Construcao<br><span>Acima da Media</span></h1>
+      <p class="hero-sub">Treino no feeling. Mentalidade real.<br>O treino mais importante e o que ninguem ve.</p>
+      <p class="hero-name">@weslley.will</p>
+    </div>
+  </div>
+
+  <!-- SOBRE -->
+  <div class="container">
+    <div class="sobre">
+      <p class="sobre-text">Eu sou o <strong>Weslley Will</strong>, personal trainer em formacao em Vila Velha-ES.</p>
+      <p class="sobre-text">Treino no feeling — sem planilha rigida, sem volume calculado. Pra mim, o treino mais importante nao e o de segunda de manha com energia. E o de quinta a noite, cansado, sem vontade, sem ninguem filmando.</p>
+      <p class="sobre-text">Nao sou guru. Nao sou coach motivacional. To construindo — e quero construir junto com voce.</p>
+
+      <div class="quote-box">
+        "Ninguem me falou que a parte mais dificil do treino nao era o exercicio. Era continuar quando a motivacao ia embora."
+      </div>
+
+      <div class="valores">
+        <div class="valor-card">
+          <span class="emoji">&#128170;</span>
+          <div class="titulo">No Feeling</div>
+          <div class="desc">Treino com consciencia, nao com planilha</div>
+        </div>
+        <div class="valor-card">
+          <span class="emoji">&#129504;</span>
+          <div class="titulo">Mentalidade</div>
+          <div class="desc">O jogo e mental antes de ser fisico</div>
+        </div>
+        <div class="valor-card">
+          <span class="emoji">&#128064;</span>
+          <div class="titulo">Sem Filtro</div>
+          <div class="desc">A real sobre treino que ninguem conta</div>
+        </div>
+        <div class="valor-card">
+          <span class="emoji">&#127959;</span>
+          <div class="titulo">Em Construcao</div>
+          <div class="desc">Aprendendo e mostrando o processo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUTO -->
+  <div class="container">
+    <div class="produto">
+      <div class="section-tag">Ebook</div>
+      <h2>O Treino Que Ninguem Ve</h2>
+      <p style="color: #888; font-size: 15px;">7 dias pra construir a mentalidade que separa quem desiste de quem chega la. Nao e plano de treino. Nao e dieta. E sobre a cabeca.</p>
+
+      <div class="produto-card">
+        <img src="capa.png" alt="O Treino Que Ninguem Ve - Capa">
+        <h3>O Treino Que Ninguem Ve</h3>
+        <p class="desc">7 dias de desafio mental. Verdade sem filtro.</p>
+        <div class="preco">R$37 <small>,00</small></div>
+        <a href="ebook/" class="cta-btn">Quero saber mais</a>
+        <p class="cta-sub">Acesso imediato. Garantia de 7 dias.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOCIAL -->
+  <div class="container">
+    <div class="social">
+      <div class="section-tag">Me acompanhe</div>
+      <h2>A construcao acontece todo dia</h2>
+      <p style="color: #888; margin-bottom: 24px; font-size: 15px;">Reels, stories e bastidores da formacao. Sem filtro.</p>
+      <a href="https://instagram.com/weslley.will" target="_blank" class="social-link">Instagram</a>
+      <a href="https://tiktok.com/@weslley.will" target="_blank" class="social-link">TikTok</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>Weslley Will &copy; 2026</p>
+      <p class="brand-tag">Construcao Acima da Media</p>
+    </div>
+  </footer>
+
+</body>
+</html>
